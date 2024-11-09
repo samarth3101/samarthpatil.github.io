@@ -496,6 +496,41 @@
                 document.getElementById('form-container').style.display = 'block';
             }
         });
+
+        // Toggle the active tab and show the respective section (Academic or Extracurricular)
+        function showSection(section) {
+            const academicSection = document.getElementById("academic-section");
+            const extracurricularSection = document.getElementById("extracurricular-section");
+            const academicBtn = document.getElementById("academic-btn");
+            const extracurricularBtn = document.getElementById("extracurricular-btn");
+
+            // Show the selected section and hide the other one
+            academicSection.classList.toggle("hidden", section !== "academic");
+            extracurricularSection.classList.toggle("hidden", section !== "extracurricular");
+
+            // Update the active tab styling
+            academicBtn.classList.toggle("active-tab", section === "academic");
+            extracurricularBtn.classList.toggle("active-tab", section === "extracurricular");
+        }
+
+        // Carousel Scroll Functionality
+        document.querySelectorAll('.scroll-arrow').forEach(button => {
+            button.addEventListener('click', function () {
+                const activeSection = document.querySelector('.experience-section:not(.hidden)');
+                const container = activeSection.querySelector('.carousel-container');
+                const scrollAmount = button.id === 'scroll-left' ? -350 : 350;
+
+                container.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Default to show the academic section when the page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            showSection('academic');
+        });
     </script>
 
 

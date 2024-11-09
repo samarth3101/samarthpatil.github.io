@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Filter Projects by Category
-function filterProjects(category) {
+function filterProjects(category, event) {
     const projects = document.querySelectorAll('.project-card');
     
     projects.forEach((project) => {
@@ -62,7 +62,9 @@ function filterProjects(category) {
     document.querySelectorAll('.filter-btn').forEach((btn) => {
         btn.classList.remove('active-filter');
     });
-    event.target.classList.add('active-filter');
+    if (event) {
+        event.target.classList.add('active-filter');
+    }
 }
 
 // Optional contact form hover functionality for About Me section
