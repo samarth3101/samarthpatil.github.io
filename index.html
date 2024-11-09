@@ -356,7 +356,9 @@
                     <div>
                         <h3>Contact</h3>
                         <p>+91 8766794922</p>
-                        <p>samarth.patil3101@gmail.com</p>
+                        <p style="font-size: 1rem; color: #fff; word-wrap: break-word; overflow-wrap: anywhere;">
+                            samarth.patil3101@gmail.com
+                        </p>
                     </div>
                 </div>
                 <div class="info-item">
@@ -438,6 +440,7 @@
             document.getElementById("preloader").style.display = "none";
         });
 
+        // Light Mode Toggle
         const toggleButton = document.getElementById('mode-toggle');
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
@@ -449,7 +452,52 @@
                 toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
             }
         });
+
+        // Form Submission with Thank You Popup
+        const form = document.getElementById('contact-form');
+        const thankYouMessage = document.getElementById('thank-you-message');
+        const closeButton = document.getElementById('close-popup');
+
+        // Add an event listener for form submission
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Send form data using Fetch API to Formspree
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset(); // Reset the form fields
+                    document.getElementById('form-container').style.display = 'none'; // Hide the form container
+                    thankYouMessage.style.display = 'flex'; // Show the popup
+                } else {
+                    alert("There was an error submitting your message. Please try again.");
+                }
+            }).catch(error => {
+                alert("There was an error submitting your message. Please try again.");
+                console.error(error);
+            });
+        });
+
+        // Close the popup and show the form again if needed
+        closeButton.addEventListener('click', function () {
+            thankYouMessage.style.display = 'none'; // Hide the popup
+            document.getElementById('form-container').style.display = 'block'; // Show the form container again
+        });
+
+        // Hide Popup if Clicked Outside
+        window.addEventListener('click', function (event) {
+            if (event.target === thankYouMessage) {
+                thankYouMessage.style.display = 'none';
+                document.getElementById('form-container').style.display = 'block';
+            }
+        });
     </script>
+
 
     <script src="script.js"></script>
 </body>
