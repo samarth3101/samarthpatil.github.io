@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/spp.jpg" type="image/png">
+    <title>Samarth Patil</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Section -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Lato&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Font Awesome (latest version) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- google material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="background-color: #0B192FB3;">
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo"><a href="#hero">(S)</a></div> <!-- Optional Logo -->
+            <ul class="nav-links">
+                <li><a href="#about"><span class="highlight"> > &nbsp;</span> About</a></li>
+                <li><a href="#experience"><span class="highlight"> > &nbsp;</span> Experience</a></li>
+                <li><a href="#projects"><span class="highlight"> > &nbsp;</span> Projects</a></li>
+                <li><a href="#skills"><span class="highlight"> > &nbsp;</span> Skills</a></li>
+                <li><a href="#contact-section"><span class="highlight"> > &nbsp;</span> Contact</a></li>
+                <li><a href="/assets/My Resume.pdf" target="_blank" rel="noopener noreferrer"
+                        class="resume-btn">Resume</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+        <button id="mode-toggle" class="mode-toggle-btn">
+            <i class="fas fa-sun"></i>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <p id="intro-greeting">Howdy, I'm</p>
+        <h1 class="intro-name" id="myname">Samarth Patil</h1>
+        <p id="dynamic-text" class="intro-name"></p>
+        <p class="intro-description">
+            “I’m a software engineer and <span class="highlight">B.Tech student</span> specializing in <span
+                class="highlight">AI and Machine Learning</span>. Skilled in <span class="highlight">Python</span>,
+            <span class="highlight">C++</span>, and <span class="highlight">full-stack development</span>, I build
+            solutions that address <span class="highlight">real-world challenges</span>, leveraging <span
+                class="highlight">AI</span> to solve complex problems and collaborating effectively in <span
+                class="highlight">team settings</span>.”
+        </p>
+        <a href="/assets/My Resume.pdf" target="_blank" class="resume-btn" id="rsn-btn">Check Out My Resume</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <img src="/assets/portfolio.jpg" alt="Samarth Prashant Patil" class="about-photo">
+            <div class="about-content">
+                <h2 id="maintopic">About Me</h2>
+                <p> My name is Samarth Prashant Patil, and I’m currently pursuing a B.Tech in Computer Science with a
+                    specialization in <span class="highlight">Artificial Intelligence and Machine Learning.</span> My
+                    coursework includes deep dives into Data Structures, Machine Learning, Neural Networks, and Advanced
+                    Algorithms, equipping me with the skills to analyze and implement cutting-edge AI solutions.<br><br>
+
+                    I’ve developed a strong foundation in software engineering through various projects and hands-on
+                    experience.
+                    My technical expertise spans <span class="highlight">Python, C++, HTML, CSS, and JavaScript.</span>
+                    Beyond technical skills, I value collaboration and communication, enabling me to lead and work
+                    effectively
+                    in team settings.<br><br>
+
+                    As a technology enthusiast, <span class="highlight">I am passionate about leveraging AI to solve
+                        complex,
+                        real-world problems.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="px-4 py-8 bg-gray-900 text-gray-200 text-center">
+        <h2 class="text-3xl font-bold text-center mb-8" id="maintopic" ;>
+            Experience</h2>
+
+        <!-- Tab buttons for Academic and Extracurricular -->
+        <div class="flex justify-center space-x-4 mb-4">
+            <button id="academic-btn" onclick="showSection('academic')" class="tab-btn active-tab">Academic</button>
+            <button id="extracurricular-btn" onclick="showSection('extracurricular')"
+                class="tab-btn">Extracurricular</button>
+        </div>
+
+        <!-- Academic Section (initially visible) -->
+        <div id="academic-section" class="experience-section carousel">
+            <div class="carousel-container">
+                <div class="carousel-card"> <!-- Card 1 -->
+                    <h3 id="nameh">Hackathon - SIH</h3>
+                    <p>Smart India Hackathon Participant</p>
+                    <p id="namepp">Collaborated with a team to develop an AI-based solution as part of the national
+                        hackathon.</p>
+                </div>
+                <div class="carousel-card"> <!-- Card 2 -->
+                    <h3 id="nameh">Hackathon - IDEATHON 2K24</h3>
+                    <p>IDEATHON Participant</p>
+                    <p id="namepp">Participated in a competitive ideation event, focused on innovative problem-solving.
+                    </p>
+                </div>
+                <div class="carousel-card"> <!-- Card 3 -->
+                    <h3 id="nameh">Forage J.P. Morgan Job Simulation</h3>
+                    <p>Completed Program</p>
+                    <p id="namepp">Gained hands-on experience in financial technology through a virtual job simulation.
+                    </p>
+                </div>
+                <div class="carousel-card"> <!-- Card 4 -->
+                    <h3 id="nameh">Eduskill AWS Internship</h3>
+                    <p>Intern - COHORT 9</p>
+                    <p id="namepp">Completed a cloud-focused internship, gaining practical skills in AWS technology and
+                        deployment.
+                    </p id="namepp">
+                </div>
+            </div>
+        </div>
+
+        <!-- Extracurricular Section (initially hidden) -->
+        <div id="extracurricular-section" class="experience-section carousel hidden">
+            <div class="carousel-container">
+                <div class="carousel-card"> <!-- Card 1 -->
+                    <h3 id="nameh">Hostel Cultural Committee Head</h3>
+                    <p>First-Year Role</p>
+                    <p id="namepp">Led cultural activities within the hostel, fostering community engagement and
+                        creativity.</p>
+                </div>
+                <div class="carousel-card"> <!-- Card 2 -->
+                    <h3 id="nameh">University Cultural Head Coordinator</h3>
+                    <p>First-Year Role</p>
+                    <p id="namepp">Organized and coordinated major university events, enhancing campus cultural life.
+                    </p>
+                </div>
+                <div class="carousel-card"> <!-- Card 3 -->
+                    <h3 id="nameh">Extracurricular Activities</h3>
+                    <p>Participant</p>
+                    <p id="namepp">Actively involved in activities like poster-making and other creative endeavors.</p>
+                </div>
+            </div>
+        </div>
+        <button id="scroll-left" class="scroll-arrow">
+            <i class="fas fa-chevron-left"></i> <!-- FontAwesome or custom arrow icon -->
+        </button>
+
+        <button id="scroll-right" class="scroll-arrow">
+            <i class="fas fa-chevron-right"></i> <!-- FontAwesome or custom arrow icon -->
+        </button>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="px-6 py-12 bg-gray-900 text-white">
+        <h2 class="text-3xl font-bold text-center mb-8" id="maintopic">Projects</h2>
+
+        <!-- Filter Buttons
+        <div class="flex justify-center space-x-6 mb-8">
+            <button class="filter-btn active-filter" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('AI')">Skill</button>
+            <button class="filter-btn" onclick="filterProjects('Web')">Web Development</button>
+            <button class="filter-btn" onclick="filterProjects('Mobile')">Python</button>
+        </div> -->
+
+        <!-- Project Cards -->
+        <div class="project-gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card" data-category="AI">
+                <img src="/assets/skillven.avif" alt="Project 1" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">SkillVenture</h3>
+                    <p class="project-description">SkillVenture is a platform for personal growth through
+                        extracurricular skills and projects.</p>
+                    <a href="https://github.com/samarth3101/SkillVenture" class="project-link" target="_blank">View on
+                        GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="Web">
+                <img src="/assets/webverse.jpg" alt="Project 2" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">WebVerse</h3>
+                    <p class="project-description">WebVerse is a hub for web development projects.</p> <br>
+                    <a href="https://github.com/samarth3101/WebVerse" class="project-link" target="_blank">View on
+                        GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="Mobile">
+                <img src="/assets/python.jpg" alt="Project 3" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">python-skills-development</h3>
+                    <p class="project-description">Focused repository for developing Python programming skills.</p>
+                    <a href="https://github.com/samarth3101/python-skills-development" class="project-link"
+                        target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 id="maintopic">My Technical Skills</h2>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+
+                <div class="skill">
+                    <p> <i class="fab fa-python"></i> Python</p>
+                </div>
+                <div class="skill">
+                    <p><i class="fab fa-java"></i>Java</p>
+                </div>
+                <div class="skill">
+                    <p><i class="fab fa-cuttlefish"></i>C++</p>
+                </div>
+                <div class="skill">
+                    <p><i class="fas fa-cogs"></i> C</p>
+                </div>
+                <div class="skill">
+                    <p><i class="fab fa-js-square"></i> JavaScript</p>
+                </div>
+                <div class="skill">
+                    <p><i class="fab fa-android"></i>Dart</p>
+                </div>
+                <div class="skill">
+                    <p><i class="fab fa-js"></i> TypeScript</p>
+                </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skill-category">
+                <h3>Web Development</h3>
+
+                <div class="skill">
+
+                    <p><i class="fab fa-html5"></i> HTML</p>
+                </div>
+                <div class="skill">
+
+                    <p><i class="fab fa-css3-alt"></i> CSS</p>
+                </div>
+                <div class="skill">
+
+                    <p><i class="fab fa-js-square"></i> JavaScript</p>
+                </div>
+
+                <!-- Additional Web Development Tools -->
+                <div class="skill">
+
+                    <p><i class="fab fa-bootstrap"></i> Bootstrap</p>
+                </div>
+                <div class="skill">
+
+                    <p><i class="fab fa-css3-alt"></i> Tailwind CSS</p>
+                </div>
+                <div class="skill">
+
+                    <p><i class="fas fa-code"></i> jQuery</p>
+                </div>
+            </div>
+
+            <!-- Tools & Frameworks -->
+            <div class="skill-category">
+                <h3>Tools & Frameworks</h3>
+                <div class="skill">
+
+                    <p><i class="fab fa-react"></i> React</p>
+                </div>
+                <div class="skill">
+
+                    <p><i class="fab fa-node"></i> Node.js</p>
+                </div>
+                <div class="skill">
+
+                    <p><i class="fab fa-aws"></i> AWS</p>
+                </div>
+
+                <!-- Python Frameworks -->
+                <div class="skill">
+
+                    <p><i class="fab fa-python"></i> Django</p>
+                </div>
+                <div class="skill">
+
+                    <p><i class="fab fa-python"></i> Flask</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <div id="contact-section">
+        <div class="contact-wrapper">
+            <!-- Left Side: Contact Form -->
+            <div class="contact-form-container" id="form-container">
+                <!-- Contact Form -->
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mqakbzod" method="POST">
+                    <div class="form-field">
+                        <input type="text" name="name" id="name" required placeholder=" " />
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="email" name="email" id="email" required placeholder=" " />
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-field">
+                        <textarea name="message" id="message" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="contact-button">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Right Side: Contact Information -->
+            <div class="contact-info-container">
+                <h2 id="maintopic">Get in Touch</h2>
+                <p>Although I'm currently looking for any new opportunities, my inbox is always open. Whether you have a
+                    question or just want to say hi, drop me a message.</p>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>PCET's Pimpri Chinchwad University, Pune, MH-India</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h3>Contact</h3>
+                        <p>+91 8766794922</p>
+                        <p>samarth.patil3101@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Working Hours</h3>
+                        <p>FLEXIBLE</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Popup (Hidden by default) -->
+            <div id="thank-you-message" class="popup" style="display: none;">
+                <div class="popup-content">
+                    <h2>Thank You for Contacting!</h2>
+                    <p>I’ll get back to you as soon as possible.</p>
+                    <button id="close-popup" class="contact-button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this inside your footer or contact section -->
+    <div class="social-links">
+        <a href="https://github.com/samarth3101" target="_blank" class="social-icon github-icon">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/samarth-patil-3101spp" target="_blank" class="social-icon linkedin-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Samarth Patil</p>
+    </footer>
+
+    <script>
+        // Typing Effect
+        const textElement = document.getElementById('dynamic-text');
+        const statements = [
+            "I innovate with every line of code..",
+            "I build solutions that make a difference..",
+            "I evolve with emerging technologies..",
+            "I code for a brighter future.."
+        ];
+
+        let currentStatementIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        let textSpeed = 100;
+
+        function typeText() {
+            let currentStatement = statements[currentStatementIndex];
+            if (isDeleting) {
+                textElement.textContent = currentStatement.substring(0, currentCharIndex--);
+            } else {
+                textElement.textContent = currentStatement.substring(0, currentCharIndex++);
+            }
+
+            if (!isDeleting && currentCharIndex === currentStatement.length) {
+                setTimeout(() => isDeleting = true, 1000);
+            }
+
+            if (isDeleting && currentCharIndex === 0) {
+                currentStatementIndex = (currentStatementIndex + 1) % statements.length;
+                isDeleting = false;
+            }
+
+            setTimeout(typeText, isDeleting ? textSpeed / 2 : textSpeed);
+        }
+
+        window.onload = typeText;
+
+        // Preloader functionality
+        window.addEventListener("load", function () {
+            document.body.classList.add("loaded");
+            document.getElementById("preloader").style.display = "none";
+        });
+
+        const toggleButton = document.getElementById('mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+
+            // Toggle icon classes
+            if (document.body.classList.contains('light-mode')) {
+                toggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
