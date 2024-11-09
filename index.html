@@ -531,6 +531,21 @@
         document.addEventListener("DOMContentLoaded", function () {
             showSection('academic');
         });
+
+        // Wait for the DOM to load before attaching event listeners
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle hamburger menu
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburgerMenu && navLinks) {
+                hamburgerMenu.addEventListener('click', function () {
+                    // Toggle the active class on both the hamburger menu and nav-links
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
     </script>
 
 
