@@ -373,13 +373,27 @@
         </div>
     </div>
 
-    <!-- Add this inside your footer or contact section -->
     <div class="social-links">
-        <a href="https://github.com/samarth3101" target="_blank" class="social-icon github-icon">
+        <!-- GitHub Icon -->
+        <a href="https://github.com/samarth3101" target="_blank" class="social-icon github-icon" id="github-icon">
             <i class="fab fa-github"></i>
+            <span class="tooltip default-tooltip" id="github-default-tooltip">Follow me on GitHub</span>
+            <span class="tooltip hover-tooltip" id="github-hover-tooltip">Let's collaborate on GitHub!</span>
         </a>
-        <a href="https://www.linkedin.com/in/samarth-patil-3101spp" target="_blank" class="social-icon linkedin-icon">
+
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/samarth-patil-3101spp" target="_blank" class="social-icon linkedin-icon"
+            id="linkedin-icon">
             <i class="fab fa-linkedin"></i>
+            <span class="tooltip default-tooltip" id="linkedin-default-tooltip">Connect with me on LinkedIn</span>
+            <span class="tooltip hover-tooltip" id="linkedin-hover-tooltip">Let's connect on LinkedIn!</span>
+        </a>
+
+        <!-- Email Icon -->
+        <a href="mailto:samarth.patil@example.com" class="social-icon email-icon" id="email-icon">
+            <i class="fas fa-envelope"></i>
+            <span class="tooltip default-tooltip" id="default-tooltip">Want to connect? Send an email.</span>
+            <span class="tooltip hover-tooltip" id="hover-tooltip">Great! Let's connect</span>
         </a>
     </div>
     </div>
@@ -519,26 +533,112 @@
             });
         });
 
-        // Default to show the academic section when the page loads
         document.addEventListener("DOMContentLoaded", function () {
             showSection('academic');
         });
 
-        // Wait for the DOM to load before attaching event listeners
         document.addEventListener('DOMContentLoaded', function () {
-            // Toggle hamburger menu
             const hamburgerMenu = document.getElementById('hamburger-menu');
             const navLinks = document.querySelector('.nav-links');
 
             if (hamburgerMenu && navLinks) {
                 hamburgerMenu.addEventListener('click', function () {
-                    // Toggle the active class on both the hamburger menu and nav-links
+                   
                     this.classList.toggle('active');
                     navLinks.classList.toggle('active');
                 });
             }
         });
-        
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const defaultTooltipEmail = document.querySelector('#default-tooltip');
+            const hoverTooltipEmail = document.querySelector('#hover-tooltip');
+            const defaultTooltipGitHub = document.querySelector('#github-default-tooltip');
+            const hoverTooltipGitHub = document.querySelector('#github-hover-tooltip');
+            const defaultTooltipLinkedIn = document.querySelector('#linkedin-default-tooltip');
+            const hoverTooltipLinkedIn = document.querySelector('#linkedin-hover-tooltip');
+
+            let isHovered = false;
+
+            // Function to show the default tooltip
+            function showDefaultTooltip(tooltipElement) {
+                if (!isHovered) { 
+                    tooltipElement.classList.remove('hidden');
+                    tooltipElement.classList.add('visible');
+                }
+            }
+
+            // Function to hide the default tooltip 
+            function hideDefaultTooltip(tooltipElement) {
+                tooltipElement.classList.remove('visible');
+                tooltipElement.classList.add('hidden');
+            }
+
+            // Function to show the hover tooltip (for any icon)
+            function showHoverTooltip(tooltipElement) {
+                tooltipElement.style.visibility = 'visible';
+                tooltipElement.style.opacity = '1';
+            }
+
+            // Function to hide the hover tooltip (for any icon)
+            function hideHoverTooltip(tooltipElement) {
+                tooltipElement.style.visibility = 'hidden';
+                tooltipElement.style.opacity = '0';
+            }
+
+            function showSequentialMessages() {
+                showDefaultTooltip(defaultTooltipGitHub);
+                setTimeout(function () {
+                    hideDefaultTooltip(defaultTooltipGitHub);
+                    
+                    showDefaultTooltip(defaultTooltipLinkedIn);
+                    setTimeout(function () {
+                        hideDefaultTooltip(defaultTooltipLinkedIn);
+                        
+                        showDefaultTooltip(defaultTooltipEmail);
+                        setTimeout(function () {
+                            hideDefaultTooltip(defaultTooltipEmail);
+                        }, 2000); 
+                    }, 2000); // LinkedIn
+                }, 2000); //github
+            }
+
+
+            // Start sequence of messages
+            setInterval(showSequentialMessages, 6000); // Repeat every 6 seconds (2 seconds for each message)
+
+            // Hover behavior for icons
+            const emailIcon = document.getElementById('email-icon');
+            emailIcon.addEventListener('mouseenter', function () {
+                isHovered = true; 
+                showHoverTooltip(hoverTooltipEmail);
+            });
+            emailIcon.addEventListener('mouseleave', function () {
+                isHovered = false;
+                hideHoverTooltip(hoverTooltipEmail);
+            });
+
+            const githubIcon = document.getElementById('github-icon');
+            githubIcon.addEventListener('mouseenter', function () {
+                isHovered = true; 
+                showHoverTooltip(hoverTooltipGitHub);
+            });
+            githubIcon.addEventListener('mouseleave', function () {
+                isHovered = false; 
+                hideHoverTooltip(hoverTooltipGitHub);
+            });
+
+            const linkedinIcon = document.getElementById('linkedin-icon');
+            linkedinIcon.addEventListener('mouseenter', function () {
+                isHovered = true; 
+                showHoverTooltip(hoverTooltipLinkedIn);
+            });
+            linkedinIcon.addEventListener('mouseleave', function () {
+                isHovered = false;
+                hideHoverTooltip(hoverTooltipLinkedIn);
+            });
+        });
+
     </script>
 
 

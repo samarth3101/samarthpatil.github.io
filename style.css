@@ -41,9 +41,8 @@ header,
 .hero {
     width: 100%;
     margin: 0;
-    /* Remove margins if there's any */
+
     padding: 0;
-    /* Adjust padding if necessary */
 }
 
 /* Light Mode Styles */
@@ -52,29 +51,24 @@ header,
 /* Light Mode Hamburger Menu */
 .light-mode .hamburger .bar {
     background-color: #005ea2;
-    /* Dark gray bars for better visibility in light mode */
 }
 
 /* Light Mode when hamburger is clicked */
 .light-mode .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-    /* Move and rotate top bar */
 }
 
 .light-mode .hamburger.active .bar:nth-child(2) {
     opacity: 0;
-    /* Hide middle bar */
 }
 
 .light-mode .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-    /* Move and rotate bottom bar */
 }
 
 /* Menu that appears when hamburger is clicked in light mode */
 .light-mode .menu {
     display: none;
-    /* Hidden by default */
     position: absolute;
     top: 0;
     left: 0;
@@ -82,7 +76,6 @@ header,
     height: 100%;
     background-color: #4b5c78;
     color: #fff;
-    /* Light text for menu */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -118,17 +111,13 @@ header,
 
 .light-mode {
     background-color: #fafafa;
-    /* Softer white background */
     color: #2c2c2c;
-    /* Slightly darker gray for contrast */
 }
 
 /* Header and Navigation in Light Mode */
 .light-mode header {
     background-color: rgba(255, 255, 255, 0.95);
-    /* Light semi-transparent background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
 }
 
 .light-mode nav {
@@ -434,23 +423,19 @@ header,
     font-size: 1rem;
     font-weight: bold;
     background-color: #ffffff;
-    /* Light background for buttons */
     color: #005ea2;
-    /* Deep blue text color */
     border: 2px solid #005ea2;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     margin: 0 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
 }
 
 /* Hover state for Tab Button in Light Mode */
 .light-mode .tab-btn:hover {
     background-color: #005ea2;
     color: #112240;
-    /* Darker text color */
     transform: scale(1.05);
 }
 
@@ -483,13 +468,10 @@ header,
     width: 80%;
     height: auto;
     background-color: #333;
-    /* Lighter background for cards */
     padding: 1.5rem;
     border-radius: 8px;
     color: #f7f9fc;
-    /* Darker text color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Lighter shadow for cards */
     text-align: center;
     scroll-snap-align: start;
     display: flex;
@@ -500,21 +482,18 @@ header,
 /* Name in Carousel Card */
 .light-mode #nameh {
     color: #005ea2;
-    /* Deep blue for name */
 }
 
 /* Secondary Name in Carousel Card */
 .light-mode #namepp {
     /* color: #938b8b; */
     color: rgb(45, 186, 172);
-    /* Darker gray for secondary text */
     opacity: 0.9;
 }
 
 /* Projects Section in Light Mode */
 .light-mode #projects {
     background-color: #f7f9fc;
-    /* Light background color */
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -531,9 +510,7 @@ header,
 /* Projects Section Container in Light Mode */
 .light-mode .projects-section {
     background-color: #f7f9fc;
-    /* Lighter background for the section */
     color: #333;
-    /* Dark text for readability */
     padding: 4rem 1.5rem;
     text-align: center;
 }
@@ -542,21 +519,18 @@ header,
 .light-mode .section-title {
     font-size: 2.5rem;
     color: #005ea2;
-    /* Deep blue color for section title */
     margin-bottom: 2rem;
 }
 
 @media (max-width: 1024px) {
     .light-mode .section-title {
         font-size: 2rem;
-        /* Slightly smaller text on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .light-mode .section-title {
         font-size: 1.75rem;
-        /* Further reduce text size for smaller screens */
         margin-bottom: 1.5rem;
     }
 }
@@ -572,9 +546,7 @@ header,
 .light-mode .filter-btn {
     background-color: transparent;
     border: 2px solid #005ea2;
-    /* Matching border color */
     color: #005ea2;
-    /* Matching text color */
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
@@ -584,7 +556,6 @@ header,
 .light-mode .filter-btn:hover,
 .light-mode .active-filter {
     background-color: #005ea2;
-    /* Deep blue background */
     color: #fff;
     /* White text on hover */
 }
@@ -612,9 +583,7 @@ header,
 @media (max-width: 768px) {
     .light-mode .experience-content {
         width: 100%;
-        /* Full width for experience content */
         padding: 1rem;
-        /* Less padding for smaller screens */
     }
 }
 
@@ -629,11 +598,8 @@ header,
 
     .light-mode .carousel-card {
         width: 90%;
-        /* Reduce card width for small screens */
         height: auto;
-        /* Let height auto adjust */
         /* padding: 1rem; */
-        /* Less padding in cards */
     }
 }
 
@@ -641,15 +607,12 @@ header,
 @media (max-width: 600px) {
     .light-mode .tab-btn {
         font-size: 0.9rem;
-        /* Slightly smaller font size */
         padding: 0.5rem 1rem;
-        /* Adjust padding for buttons */
         box-shadow: 0 5px 15px rgba(0, 80, 142, 0.504)
     }
 
     .light-mode .section-title {
         font-size: 1.5rem;
-        /* Make titles smaller for mobile */
     }
 }
 
@@ -659,16 +622,13 @@ header,
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
-    /* Fix display issue */
 }
 
 .light-mode .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    /* Slightly more prominent shadow on hover */
 }
 
 /* Project Image Styling */
@@ -697,7 +657,6 @@ header,
     font-size: 1rem;
     /* color: #555; */
     color: aliceblue;
-    /* Darker gray for description */
     margin-bottom: 1rem;
     opacity: 0.8;
 }
@@ -705,7 +664,6 @@ header,
 /* Project Link Styling */
 .light-mode .project-link {
     color: #005ea2;
-    /* Deep blue link color */
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -897,28 +855,17 @@ header,
     }
 }
 
-/* Additional Responsiveness for Smaller Screens */
 @media (max-width: 480px) {
     .light-mode .skill-category {
         padding: 1rem;
     }
 }
 
-
-
-
-
-
-
-
-
 /* lightmode for contact */
 /* General Section Style for Light Mode */
 body.light-mode #contact-section {
     background: #f7f9fc !important;
-    /* Very light gray background for comfort */
     color: #333 !important;
-    /* Dark gray text for easy readability */
 }
 
 /* Contact Wrapper */
@@ -930,27 +877,21 @@ body.light-mode #contact-section {
 /* Contact Form (Left Side) */
 body.light-mode .contact-form-container {
     background: #ffffff !important;
-    /* White background for form container */
     color: #333 !important;
-    /* Dark gray text */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
-    /* Subtle shadow */
     max-width: none !important;
 }
 
 /* Contact Form Heading */
 body.light-mode .contact-form-container h2 {
     color: #005ea2 !important;
-    /* Soft blue for headings */
     font-size: 2rem !important;
-    /* Larger font size */
     margin-bottom: 1.5rem !important;
 }
 
 /* Contact Form Paragraph */
 body.light-mode .contact-form-container p {
     color: #005ea2 !important;
-    /* Soft blue for description */
     font-size: 1.1rem !important;
     margin-bottom: 2rem !important;
     text-align: center !important;
@@ -962,11 +903,8 @@ body.light-mode .form-field textarea {
     width: 100% !important;
     padding: 1rem !important;
     background: #f4f6f9 !important;
-    /* Soft light gray background */
     border: 2px solid #005ea2 !important;
-    /* Blue border for inputs */
     color: #333 !important;
-    /* Dark gray text inside fields */
     font-size: 1.1rem !important;
     border-radius: 8px !important;
     /* transition: all 0.3s ease !important; */
@@ -977,9 +915,7 @@ body.light-mode .form-field textarea {
 body.light-mode .form-field input:focus,
 body.light-mode .form-field textarea:focus {
     border-color: #52d2a4 !important;
-    /* Soft green border on focus */
     box-shadow: 0 5px 15px rgba(82, 210, 164, 0.3) !important;
-    /* Green focus glow */
 }
 
 /* Labels for Input Fields */
@@ -989,12 +925,10 @@ body.light-mode .form-field label {
     left: 1rem !important;
     font-size: 1.1rem !important;
     color: #005ea2 !important;
-    /* Soft blue for labels */
     transition: all 0.3s ease !important;
     pointer-events: none !important;
 }
 
-/* Label moves up when input is focused or has value */
 body.light-mode .form-field input:focus+label,
 body.light-mode .form-field textarea:focus+label,
 body.light-mode .form-field input:not(:placeholder-shown)+label,
@@ -1002,15 +936,12 @@ body.light-mode .form-field textarea:not(:placeholder-shown)+label {
     top: -0.5rem !important;
     font-size: 0.9rem !important;
     color: #52d2a4 !important;
-    /* Soft green when focused */
 }
 
 /* Submit Button */
 body.light-mode .contact-button {
     background-color: #005ea2 !important;
-    /* Soft blue background */
     color: #fff !important;
-    /* White text */
     padding: 0.8rem 1.5rem !important;
     border: none !important;
     border-radius: 30px !important;
@@ -1024,7 +955,6 @@ body.light-mode .contact-button {
 body.light-mode .contact-button:hover {
     transform: scale(1.05) !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
-    /* Subtle shadow on hover */
 }
 
 body.light-mode .contact-button:active {
@@ -1042,7 +972,6 @@ body.light-mode .contact-info-container {
     gap: 2rem !important;
     box-sizing: border-box !important;
     background: #ffffff !important;
-    /* White background for info container */
     color: #333 !important;
     /* Dark text */
 }
@@ -1050,50 +979,41 @@ body.light-mode .contact-info-container {
 /* Contact Information Items */
 body.light-mode .info-item {
     background: #424243 !important;
-    /* Soft light gray for each info item */
     padding: 1rem !important;
     border-radius: 8px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    /* Subtle shadow */
 }
 
 /* Icon Styling */
 body.light-mode .info-item i {
     color: #005ea2 !important;
-    /* Soft blue for icons */
     font-size: 1.5rem !important;
     padding: 10px !important;
     border-radius: 50% !important;
     background: #f4f6f9 !important;
-    /* Light gray background for icons */
     transition: background 0.3s ease !important;
 }
 
 /* Icon Hover Effect */
 body.light-mode .info-item i:hover {
     background: #52d2a4 !important;
-    /* Soft green on hover */
     color: #fff !important;
-    /* White icon color on hover */
 }
 
 /* Popup */
 body.light-mode .popup-content {
     background: #ffffff !important;
-    /* White background for popup */
     color: #333 !important;
     /* Dark text */
 }
 
 body.light-mode #close-popup {
     background-color: #64FFDA !important;
-    /* Softer teal for close button */
     color: #fff !important;
 }
 
 body.light-mode #close-popup:hover {
     background-color: #52d2a4 !important;
-    /* Slightly darker teal on hover */
 }
 
 
@@ -1105,22 +1025,17 @@ body.light-mode #close-popup:hover {
     font-size: 1.5em;
     cursor: pointer;
     color: inherit;
-    /* Inherits color for seamless light/dark transition */
     margin-left: 1rem;
-    /* Adds left margin to separate from resume button */
     width: 40px;
-    /* Fixed width */
     height: 40px;
-    /* Fixed height */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Adjust space between mode-toggle and resume button */
+/* space between mode-toggle and resume button */
 .nav-links .resume-btn {
     margin-right: 1.5rem;
-    /* Adds space between resume button and toggle button */
 }
 
 
@@ -1129,17 +1044,14 @@ body.light-mode #close-popup:hover {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        /* Hide nav links for smaller screens */
     }
 
     .hamburger {
         margin-left: 10px;
-        /* Add spacing to separate the hamburger and sun icon */
     }
 
     .mode-toggle-btn {
         margin-right: 1px;
-        /* Add space on the right side of the mode toggle button */
     }
 }
 
@@ -1147,12 +1059,10 @@ body.light-mode #close-popup:hover {
 @media (max-width: 320px) {
     .hamburger {
         margin-left: 5px;
-        /* Reduce margin for small screens to save space */
     }
 
     .mode-toggle-btn {
         margin-right: 1px;
-        /* Adjust to fit the smaller width */
     }
 }
 
@@ -1347,7 +1257,6 @@ nav ul li a.resume-btn:hover::after {
 /* Responsive Media Query */
 @media (max-width: 1024px) {
 
-    /* Adjust navbar padding and logo size for medium screens */
     header {
         padding: 0.5rem 1.5rem;
     }
@@ -1364,7 +1273,6 @@ nav ul li a.resume-btn:hover::after {
 
 @media (max-width: 768px) {
 
-    /* Stack the navigation links vertically */
     .nav-links {
         position: absolute;
         top: 60px;
@@ -1378,17 +1286,14 @@ nav ul li a.resume-btn:hover::after {
         z-index: 1001;
     }
 
-    /* Toggle navigation on clicking hamburger */
     .nav-links.active {
         display: flex;
     }
 
-    /* Show hamburger menu on small screens */
     .hamburger {
         display: flex;
     }
 
-    /* Reduce padding and font size on small screens */
     nav ul li a {
         font-size: 1rem;
     }
@@ -1422,7 +1327,7 @@ nav ul li a.resume-btn:hover::after {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: #0b192fe7;
     padding: 2rem 2rem 2rem 4rem;
 }
@@ -1443,7 +1348,6 @@ nav ul li a.resume-btn:hover::after {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
-    /* Added transform transition */
 }
 
 #rsn-btn:hover {
@@ -1618,7 +1522,6 @@ nav ul li a.resume-btn:hover::after {
     max-width: 900px;
     margin: 0 auto;
     flex-direction: row;
-    /* Default layout for larger screens */
 }
 
 /* Image styling */
@@ -1679,7 +1582,6 @@ nav ul li a.resume-btn:hover::after {
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
-        /* Stacks image and text vertically */
         align-items: center;
         text-align: center;
     }
@@ -1688,17 +1590,14 @@ nav ul li a.resume-btn:hover::after {
         width: 250px;
         height: 300px;
         margin: 0 0 1.5rem 0;
-        /* Center image with some bottom margin */
     }
 
     #about h2 {
         font-size: 1.5rem;
-        /* Reduce font size for smaller screens */
     }
 
     #about p {
         font-size: 0.85rem;
-        /* Smaller font size for better readability */
         max-width: 100%;
     }
 }
@@ -1706,7 +1605,6 @@ nav ul li a.resume-btn:hover::after {
 @media (max-width: 480px) {
     .about-container {
         padding: 1rem;
-        /* Reduce padding on smaller screens */
     }
 
     .about-photo {
@@ -1725,7 +1623,6 @@ nav ul li a.resume-btn:hover::after {
 }
 
 /* experince section */
-/* Tab Button Styling (Academic, Extracurricular, etc.) */
 #experience {
     /* display: flex; */
     flex-direction: column;
@@ -1813,7 +1710,6 @@ nav ul li a.resume-btn:hover::after {
 /* Responsive adjustments */
 @media (max-width: 768px) {
 
-    /* Stack cards vertically on smaller screens */
     .carousel-container {
         flex-direction: column;
         align-items: center;
@@ -1823,16 +1719,13 @@ nav ul li a.resume-btn:hover::after {
 
     .carousel-card {
         width: 80%;
-        /* Adjust width to fit nicely on smaller screens */
         height: auto;
-        /* Allow height to adapt based on content */
     }
 }
 
 @media (max-width: 480px) {
     .carousel-card {
         width: 90%;
-        /* Slightly narrower for very small screens */
         /* padding: 1rem; */
     }
 
@@ -1850,7 +1743,6 @@ nav ul li a.resume-btn:hover::after {
         display: none;
     }
 
-    /* Adjust padding for better spacing */
     #experience {
         padding: 1rem;
     }
@@ -2068,7 +1960,6 @@ nav ul li a.resume-btn:hover::after {
     color: aliceblue;
     margin-bottom: 1rem;
     position: relative;
-    /* Needed for positioning the underline */
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -2230,7 +2121,6 @@ nav ul li a.resume-btn:hover::after {
     font-size: 3rem;
 }
 
-/* Adjust padding and spacing for smaller screens */
 @media (max-width: 768px) {
     #skills {
         padding: 3rem 1rem;
@@ -2272,7 +2162,6 @@ nav ul li a.resume-btn:hover::after {
     flex-wrap: wrap;
     margin: 0 auto;
     flex-direction: column;
-    /* Default to stacked layout */
 }
 
 /* Contact Form Container (Left Side) */
@@ -2286,7 +2175,6 @@ nav ul li a.resume-btn:hover::after {
     transition: all 0.3s ease;
     box-sizing: border-box;
     order: 1;
-    /* Default stacking order */
 }
 
 .contact-form-container h2 {
@@ -2427,7 +2315,6 @@ nav ul li a.resume-btn:hover::after {
 }
 
 /* thank you  */
-/* Styles for the Thank You popup */
 #thank-you-message {
     position: fixed;
     top: 0;
@@ -2441,14 +2328,11 @@ nav ul li a.resume-btn:hover::after {
     align-items: center;
     z-index: 9999;
     display: none;
-    /* Hidden by default */
 }
 
 #thank-you-message .popup-content {
     background-color: #0e2a47;
-    /* Dark background similar to contact form */
     color: #64FFDA;
-    /* Button color for text */
     padding: 2rem;
     max-width: 400px;
     width: 90%;
@@ -2499,35 +2383,29 @@ nav ul li a.resume-btn:hover::after {
 @media screen and (min-width: 1024px) {
     .contact-wrapper {
         flex-direction: row;
-        /* Form on the left, info on the right */
         gap: 2rem;
     }
 
     .contact-form-container {
         width: 48%;
         order: 1;
-        /* Form on the left */
     }
 
     .contact-info-container {
         width: 48%;
         order: 2;
-        /* Info on the right */
     }
 }
 
 @media screen and (max-width: 1024px) {
     .contact-wrapper {
         flex-direction: column;
-        /* Stack items vertically on smaller screens */
     }
 
     .contact-form-container,
     .contact-info-container {
         width: 100%;
-        /* Full width on smaller screens */
         max-width: none;
-        /* Remove max-width on smaller screens */
     }
 }
 
@@ -2582,54 +2460,162 @@ nav ul li a.resume-btn:hover::after {
 /* Footer Styling */
 footer {
     background-color: #0B192F;
-    /* Dark background for the footer */
     color: #fff;
-    /* White text */
     padding: 20px 0;
-    /* Padding for spacing */
     text-align: center;
-    /* Center align the content */
     position: relative;
     bottom: 0;
     width: 100%;
-    /* Ensure it spans the entire width */
 }
 
 footer p {
     margin: 0;
-    /* Remove default margin */
     font-size: 1rem;
-    /* Set the font size */
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     footer {
         padding: 15px 0;
-        /* Reduce padding on smaller screens */
     }
 
     footer p {
         font-size: 0.9rem;
-        /* Slightly smaller font size on mobile */
     }
 }
 
 @media (max-width: 480px) {
     footer {
         padding: 10px 0;
-        /* Further reduce padding on very small screens */
     }
 
     footer p {
         font-size: 0.8rem;
-        /* Reduce font size more for small screens */
     }
 }
 
-/* gitlin */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 100;
+    animation: bounceIn 1s ease-out; 
+}
 
-/* Position and layout for the social links */
+.social-icon {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.github-icon:hover {
+    transform: translateX(1px) translateY(1px) scale(1.1);
+    background-color: #4f1368;
+}
+
+.linkedin-icon:hover {
+    transform: translateX(1px) translateY(1px) scale(1.1);
+    background-color: #0077b5;
+}
+
+.email-icon:hover {
+    transform: translateX(1px) translateY(1px) scale(1.1);
+    background-color: #d14836; 
+}
+
+
+.social-icon i {
+    font-size: 1.5em;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 70px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: auto;
+    max-width: 200px; 
+    text-align: center;
+}
+
+@keyframes slideOut {
+    0% {
+        visibility: visible;
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-50%) translateY(-10px); 
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-50%) translateY(-10px); 
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+.default-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    animation: none; 
+}
+
+.hover-tooltip {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.default-tooltip.visible {
+    animation: slideOut 0.5s forwards; 
+}
+
+.default-tooltip.hidden {
+    animation: slideIn 0.5s forwards; 
+}
+
+.social-icon:hover .default-tooltip {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.social-icon:hover .hover-tooltip {
+    visibility: visible;
+    opacity: 1;
+    animation: slideOut 0.5s forwards; /* Slide out hover tooltip */
+}
+
+/* Positioning for all social icons */
 .social-links {
     position: fixed;
     bottom: 20px;
@@ -2639,125 +2625,63 @@ footer p {
     z-index: 100;
 }
 
-/* Styling the social icon itself */
 .social-icon {
-    font-size: 30px;
-    /* Default icon size */
-    width: 60px;
-    /* Default width of circle */
-    height: 60px;
-    /* Default height of circle */
-    padding: 0;
-    /* Remove padding to make the size fixed */
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
-    /* This makes the element round */
-    color: #fff;
-    display: flex;
-    /* Use flexbox to center the icon */
-    align-items: center;
-    /* Center vertically */
-    justify-content: center;
-    /* Center horizontally */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    position: relative; 
 }
 
-/* Hover effect for GitHub icon */
-.github-icon:hover {
-    transform: translateX(1px) translateY(1px) scale(1.1);
-    /* Scale increases size by 10% */
-    background-color: #4f1368;
-}
 
-/* Hover effect for LinkedIn icon */
-.linkedin-icon:hover {
-    transform: translateX(1px) translateY(1px) scale(1.1);
-    /* Scale increases size by 10% */
-    background-color: #0077b5;
-}
-
-/* Icon size inside circle */
-.social-icon i {
-    font-size: 1.5em;
-    /* Font size of the icon */
-}
-
-/* Media Queries for Responsiveness */
-
-/* For smaller screens (mobile devices) */
-@media (max-width: 600px) {
-    .social-links {
-        right: 10px;
-        /* Adjust position on smaller screens */
-        bottom: 10px;
-        /* Adjust position on smaller screens */
-        gap: 10px;
-        /* Reduce gap between icons */
-    }
-
-    .social-icon {
-        width: 50px;
-        /* Reduce the size of the circle */
-        height: 50px;
-        /* Reduce the size of the circle */
-        font-size: 25px;
-        /* Reduce icon size */
-    }
-
-    .social-icon i {
-        font-size: 1.2em;
-        /* Reduce icon font size */
-    }
-}
-
-/* For medium screens (tablets or larger mobile devices) */
+/* For medium screens */
 @media (max-width: 1024px) {
     .social-links {
         right: 15px;
-        /* Adjust position for tablets */
         bottom: 15px;
-        /* Adjust position for tablets */
         gap: 12px;
-        /* Adjust gap for tablets */
     }
 
     .social-icon {
         width: 55px;
-        /* Adjust circle size for tablets */
         height: 55px;
-        /* Adjust circle size for tablets */
         font-size: 28px;
-        /* Slightly smaller icon size for tablets */
     }
 
     .social-icon i {
         font-size: 1.3em;
-        /* Slightly smaller icon font size for tablets */
     }
 }
 
-/* For larger screens (desktops) */
+/*(desktops) */
 @media (min-width: 1025px) {
     .social-links {
         right: 20px;
-        /* Default position for larger screens */
         bottom: 20px;
-        /* Default position for larger screens */
         gap: 15px;
-        /* Default gap for larger screens */
     }
 
     .social-icon {
         width: 60px;
-        /* Default circle size */
         height: 60px;
-        /* Default circle size */
         font-size: 30px;
-        /* Default icon size */
     }
 
     .social-icon i {
         font-size: 1.5em;
-        /* Default icon font size */
+    }
+}
+
+/* Bounce-in animation */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-100vh); 
+        opacity: 0; 
+    }
+    60% {
+        transform: translateY(30px); 
+        opacity: 1; 
+    }
+    80% {
+        transform: translateY(-15px); 
+    }
+    100% {
+        transform: translateY(0);
     }
 }

@@ -1,10 +1,9 @@
-// Toggle hamburger menu
 document.getElementById('hamburger-menu').addEventListener('click', function() {
     this.classList.toggle('active');
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
-// Handle section switching between Academic and Extracurricular
+
 function showSection(section) {
     const academicSection = document.getElementById("academic-section");
     const extracurricularSection = document.getElementById("extracurricular-section");
