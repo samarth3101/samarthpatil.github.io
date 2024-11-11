@@ -46,7 +46,6 @@ header,
     /* Adjust padding if necessary */
 }
 
-/* Dark Light Theme */
 /* Light Mode Styles */
 
 
@@ -82,7 +81,6 @@ header,
     width: 100%;
     height: 100%;
     background-color: #4b5c78;
-    /* Menu background color in light mode */
     color: #fff;
     /* Light text for menu */
     flex-direction: column;
@@ -163,55 +161,43 @@ header,
 .light-mode #skills,
 .light-mode #contact-section {
     background-color: #f7f9fc;
-    /* Light pastel background */
     color: #333;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    /* Soft shadow for depth */
 }
 
 /* Highlight Color */
 .light-mode .highlight {
     color: #005ea2;
-    /* Deep blue highlight */
     text-shadow: 0 0 5px rgba(0, 94, 162, 0.3);
-    /* Subtle glow */
 }
 
 /* Button Styling */
 .light-mode .mode-toggle-btn {
     background: #e0eaff;
-    /* Light blue background for the button */
     color: #005ea2;
-    /* Matching deep blue for the icon */
     margin-left: 1rem;
-    /* Space between elements */
-    padding: 0.3rem 0.8rem;
     border-radius: 6px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Common style for both buttons in light mode */
 .light-mode .resume-btn {
-    /* background-color: #007acc; */
     color: #ffffff;
-    /* Ensure text remains white */
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 2px solid #007acc;
     transition: background-color 0.3s, color 0.3s;
-    /* Transition for both background and text color */
 }
 
 
 .light-mode #rsn-btn {
-    background-color: #007acc;
-    color: #ffffff;
-    /* Ensure text remains white */
-    padding: 0.5rem 1rem;
+    color: #007acc;
+    background-color: #ffffff;
+
+    padding: 0.3rem 0.7rem;
     border-radius: 5px;
     border: 2px solid #007acc;
-    transition: background-color 0.3s, color 0.3s;
-    /* Transition for both background and text color */
+    /* transition: background-color 0.3s, color 0.3s; */
 }
 
 
@@ -223,7 +209,7 @@ header,
 
 .light-mode #rsn-btn:hover {
     background-color: #ffffff;
-    /* color: #007acc;  */
+
 }
 
 /* Active state for both buttons */
@@ -231,15 +217,15 @@ header,
 .light-mode #rsn-btn:active {
     background-color: #005ea2;
     color: #ffffff;
-    /* Ensure the text remains white in active state */
+
 }
 
-/* Optionally, you can also adjust active/focus states */
+
 .light-mode .resume-btn:active,
 .light-mode #rsn-btn:active {
     background-color: #003f74;
     color: #ffffff;
-    /* Ensure the text remains visible */
+
 }
 
 /* Subheading and Text Styles */
@@ -253,26 +239,25 @@ header,
 
 .light-mode #myname {
     color: #3a3a3a;
-    /* Dark gray for contrast */
+
 }
 
 .light-mode #dynamic-text {
     color: #4a4a4a;
-    /* Medium gray for softer effect */
+
 }
 
 .light-mode .intro-description {
     color: #5a5a5a;
-    /* Slightly darker gray for descriptions */
+
 }
 
-/* Additional Styling for Nav Links */
+/*  Nav Links */
 .light-mode nav a {
     color: #005ea2;
 }
 
-/* about light mode setting */
-/* About Section in Light Mode */
+
 /* About Section (Light Mode) */
 #about {
     display: flex;
@@ -280,11 +265,10 @@ header,
     justify-content: center;
     min-height: 100vh;
     background-color: #f7f9fc;
-    /* Light background */
     padding: 2rem;
 }
 
-/* Flexbox container for image and content */
+/* Flexbox image and content */
 .about-container {
     display: flex;
     align-items: center;
@@ -292,7 +276,6 @@ header,
     max-width: 900px;
     margin: 0 auto;
     flex-direction: row;
-    /* Default layout for larger screens */
 }
 
 /* Image styling */
@@ -308,22 +291,21 @@ header,
 .light-mode .about-content {
     max-width: 600px;
     color: #333 !important;
-    /* Ensure dark text color in light mode */
 }
 
 .light-mode #about h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #005ea2 !important;
-    /* Deep blue text for the header */
-    margin-bottom: 1rem;
+
+    /* margin-bottom: 1rem; */
 }
 
 .light-mode #about p {
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.6;
     color: #444 !important;
-    /* Darker text for readability */
+
 }
 
 .light-mode #about span.highlight {
@@ -407,13 +389,13 @@ header,
 
 /* light mode setting for experience secgtion */
 /* Experience Section in Light Mode */
+/* Experience Section in Light Mode */
 .light-mode #experience {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     min-height: 100vh;
     background-color: #f7f9fc;
-    /* Light background for the section */
     padding: 2rem 2rem 2rem 4rem;
     position: relative;
     padding-top: 150px;
@@ -421,19 +403,30 @@ header,
 
 @media (max-width: 1024px) {
     .light-mode #experience {
-        padding: 2rem 1rem;
-        /* Reduce padding for smaller screens */
+        min-height: 100vh;
+        padding-top: 120px;
+        padding: 2rem;
+        /* Adjusted padding for tablet screens */
     }
 }
 
 @media (max-width: 768px) {
     .light-mode #experience {
-        padding-top: 100px;
-        /* Reduce top padding on smaller screens */
-        padding: 2rem 1rem;
-        /* Further reduce padding */
+        padding-top: 150px;
+        padding: 2rem 2rem 2rem 4rem;
+        min-height: 100vh;
+        /* Reduced padding for smaller tablets */
     }
 }
+
+@media (max-width: 480px) {
+    .light-mode #experience {
+        padding-top: 80px;
+        padding: 1rem;
+        /* Further reduced padding for mobile screens */
+    }
+}
+
 
 /* Tab Button Styling in Light Mode */
 .light-mode .tab-btn {
@@ -487,8 +480,8 @@ header,
 /* Carousel Card Styling in Light Mode */
 .light-mode .carousel-card {
     flex: 0 0 auto;
-    width: 350px;
-    height: 270px;
+    width: 80%;
+    height: auto;
     background-color: #333;
     /* Lighter background for cards */
     padding: 1.5rem;
@@ -512,7 +505,8 @@ header,
 
 /* Secondary Name in Carousel Card */
 .light-mode #namepp {
-    color: #938b8b;
+    /* color: #938b8b; */
+    color: rgb(45, 186, 172);
     /* Darker gray for secondary text */
     opacity: 0.9;
 }
@@ -626,19 +620,19 @@ header,
 
 /* Carousel Container Fix for Smaller Devices */
 @media (max-width: 600px) {
-    .light-mode .carousel-container {
-        gap: 1rem;
+    /* .light-mode .carousel-container { */
+        /* gap: 1rem; */
         /* Reduce gap for smaller screens */
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
         /* Less padding */
-    }
+    /* } */
 
     .light-mode .carousel-card {
-        width: 250px;
+        width: 90%;
         /* Reduce card width for small screens */
         height: auto;
         /* Let height auto adjust */
-        padding: 1rem;
+        /* padding: 1rem; */
         /* Less padding in cards */
     }
 }
@@ -650,6 +644,7 @@ header,
         /* Slightly smaller font size */
         padding: 0.5rem 1rem;
         /* Adjust padding for buttons */
+        box-shadow: 0 5px 15px rgba(0, 80, 142, 0.504)
     }
 
     .light-mode .section-title {
@@ -700,9 +695,11 @@ header,
 /* Project Description Styling */
 .light-mode .project-description {
     font-size: 1rem;
-    color: #555;
+    /* color: #555; */
+    color: aliceblue;
     /* Darker gray for description */
     margin-bottom: 1rem;
+    opacity: 0.8;
 }
 
 /* Project Link Styling */
@@ -827,7 +824,8 @@ header,
 
 /* Project Link Styling in Light Mode */
 .light-mode .project-link {
-    color: #0052ea;
+    /* color: #0052ea; */
+    color: rgb(45, 186, 172);
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -850,11 +848,13 @@ header,
         max-width: 250px;
         background-color: #333;
         text-align: center;
+        margin: 32px;
+        padding: 16px;
     }
 
     .light-mode .skill {
         flex-direction: column;
-        align-items: center;
+        align-items: self-start;
     }
 
     .light-mode .skill p {
@@ -935,6 +935,7 @@ body.light-mode .contact-form-container {
     /* Dark gray text */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
     /* Subtle shadow */
+    max-width: none !important;
 }
 
 /* Contact Form Heading */
@@ -968,7 +969,8 @@ body.light-mode .form-field textarea {
     /* Dark gray text inside fields */
     font-size: 1.1rem !important;
     border-radius: 8px !important;
-    transition: all 0.3s ease !important;
+    /* transition: all 0.3s ease !important; */
+    
 }
 
 /* Focused Fields Styling */
@@ -1009,14 +1011,13 @@ body.light-mode .contact-button {
     /* Soft blue background */
     color: #fff !important;
     /* White text */
-    padding: 1rem 2rem !important;
+    padding: 0.8rem 1.5rem !important;
     border: none !important;
     border-radius: 30px !important;
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
     font-weight: bold !important;
     cursor: pointer !important;
     outline: none !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 /* Button Hover Effect */
@@ -1032,7 +1033,7 @@ body.light-mode .contact-button:active {
 
 /* Contact Information (Right Side) */
 body.light-mode .contact-info-container {
-    width: 48% !important;
+    width: 100% !important;
     padding: 2rem !important;
     border-radius: 12px !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
@@ -1095,75 +1096,7 @@ body.light-mode #close-popup:hover {
     /* Slightly darker teal on hover */
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    body.light-mode .contact-wrapper {
-        flex-direction: column !important;
-        /* Stack items vertically on tablets and smaller screens */
-        gap: 2rem !important;
-    }
 
-    body.light-mode .contact-info-container,
-    body.light-mode .contact-form-container {
-        width: 100% !important;
-        /* Full width on smaller screens */
-    }
-
-    body.light-mode .contact-button {
-        width: 100% !important;
-        /* Make the submit button full width */
-    }
-}
-
-@media (max-width: 768px) {
-    body.light-mode .contact-form-container h2 {
-        font-size: 1.8rem !important;
-        /* Slightly smaller heading on mobile */
-    }
-
-    body.light-mode .contact-form-container p {
-        font-size: 1rem !important;
-        /* Smaller font size for mobile */
-    }
-
-    body.light-mode .form-field input,
-    body.light-mode .form-field textarea {
-        font-size: 1rem !important;
-        /* Slightly smaller input fields */
-    }
-
-    body.light-mode .contact-button {
-        font-size: 1rem !important;
-        /* Smaller font size for button */
-    }
-}
-
-@media (max-width: 480px) {
-    body.light-mode .contact-form-container h2 {
-        font-size: 1.5rem !important;
-        /* Even smaller heading on very small screens */
-    }
-
-    body.light-mode .contact-form-container p {
-        font-size: 0.9rem !important;
-        /* Smaller font size for mobile */
-    }
-
-    body.light-mode .info-item i {
-        font-size: 1.2rem !important;
-        /* Smaller icons for very small screens */
-    }
-
-    body.light-mode .contact-info-container {
-        padding: 1rem !important;
-        /* Reduce padding on very small screens */
-    }
-
-    body.light-mode .contact-form-container {
-        padding: 2rem !important;
-        /* Adjust form container padding */
-    }
-}
 
 /* General styling for light/dark mode toggle button */
 .mode-toggle-btn {
@@ -1189,6 +1122,8 @@ body.light-mode #close-popup:hover {
     margin-right: 1.5rem;
     /* Adds space between resume button and toggle button */
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -1757,12 +1692,12 @@ nav ul li a.resume-btn:hover::after {
     }
 
     #about h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         /* Reduce font size for smaller screens */
     }
 
     #about p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         /* Smaller font size for better readability */
         max-width: 100%;
     }
@@ -1800,7 +1735,7 @@ nav ul li a.resume-btn:hover::after {
     background-color: #0b192fe7;
     padding: 2rem 2rem 2rem 4rem;
     position: relative;
-    padding-top: 150px;
+    /* padding-top: 150px; */
 }
 
 
@@ -1898,7 +1833,7 @@ nav ul li a.resume-btn:hover::after {
     .carousel-card {
         width: 90%;
         /* Slightly narrower for very small screens */
-        padding: 1rem;
+        /* padding: 1rem; */
     }
 
     #experience h2 {
@@ -2200,7 +2135,7 @@ nav ul li a.resume-btn:hover::after {
 
     .skill {
         flex-direction: column;
-        align-items: center;
+        align-items: self-start;
     }
 
     .skill p {
@@ -2608,9 +2543,6 @@ nav ul li a.resume-btn:hover::after {
         margin: 0 auto;
     }
 
-    .contact-form {
-        gap: 1rem;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -2619,12 +2551,16 @@ nav ul li a.resume-btn:hover::after {
     .contact-info-container {
         width: 100%;
         padding: 2rem;
+
     }
 
     .form-field input,
     .form-field textarea {
-        padding: 0.8rem;
-        font-size: 1rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+        width: 100%;
+        border-radius: 8px;
+        border: 2px solid #64FFDA;
     }
 
     .contact-button {
@@ -2634,10 +2570,12 @@ nav ul li a.resume-btn:hover::after {
 
     .info-item {
         gap: 10px;
+        border-radius: 8px;
+        padding: 1rem;
     }
 
     .info-item i {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
