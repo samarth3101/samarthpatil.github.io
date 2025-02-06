@@ -1507,7 +1507,7 @@ nav ul li a.resume-btn:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 98vh;
     background-color: #0b192fe7;
     padding: 2rem;
 }
@@ -1626,9 +1626,9 @@ nav ul li a.resume-btn:hover::after {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 85vh;
     background-color: #0b192fe7;
-    padding: 2rem 2rem 2rem 4rem;
+    padding: 8rem 2rem 2rem 4rem;
     position: relative;
     /* padding-top: 150px; */
 }
@@ -1872,8 +1872,7 @@ nav ul li a.resume-btn:hover::after {
 }
 
 /* Skills Section */
-/* 
- */
+
 #skills {
     font-size: 2.5rem;
     align-items: center;
